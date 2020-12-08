@@ -31,17 +31,37 @@ class PanelMenu extends Component
             [
                 "icon" => "api",
                 "text" => "Dashboard",
-                "path" => "dashboad"
+                "path" => "dashboad",
+                "submenu" => ""
+            ],
+            [
+                "icon" => "ring_volume",
+                "text" => "Call Manager",
+                "path" => "callmanager",
+                "submenu" => [
+                    [
+                        "icon" => "add_ic_call",
+                        "text" => "Add Call",
+                        "path" => "addcall"
+                    ],
+                    [
+                        "icon" => "phone_missed",
+                        "text" => "Missed Call",
+                        "path" => "addcall"
+                    ]
+                ]
             ],
             [
                 "icon" => "group_work",
                 "text" => "Team Design",
-                "path" => "teamdesign"
+                "path" => "teamdesign",
+                "submenu" => ""
             ],
             [
                 "icon" => "account_circle",
                 "text" => "Users",
-                "path" => "users"
+                "path" => "users",
+                "submenu" => ""
             ],
         ];
     }

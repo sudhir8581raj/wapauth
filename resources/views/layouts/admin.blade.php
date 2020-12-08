@@ -18,13 +18,14 @@
 
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="{{ asset('js/app.js') }}" defer></script>
+   
   <!-- extranel page -->
   @yield('css')
 
   @yield('js')
   </head>
   <body token={{csrf_token()}}>
+<div id="app">
   <!-- start full page loader -->
       <div class="fullpage-loader d-none">
         <div class="lds-ripple">
@@ -41,7 +42,7 @@
         <h4 class="logo-lg">Wap<span>Erp Solution</span></h4>
         <h4 class="logo-sm">W<span>ES</span></h4>
       </div>
-      <div class="middle_area col-5">
+      <div class="middle_area col-5 pt-0">
       <label for="check">
         <i class="fas fa-bars" id="sidebar_btn"></i>
         <!-- <i class="fas fa-bars" id="sidebar_btn" onclick="document.querySelector('.mobile_nav_items').classList.toggle('active');"></i> -->
@@ -72,7 +73,7 @@
      @yield('content')
     </div>
     
-
+</div>
     <!-- main content end -->
     <script type="text/javascript">
 
@@ -81,7 +82,9 @@
         $('.mobile_nav_items').toggleClass('active');
       });
     });
+
     </script>
+     <script src="{{ asset('js/app.js') }}" defer></script>
 
   </body>
 </html>
